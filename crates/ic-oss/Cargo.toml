@@ -1,0 +1,23 @@
+[package]
+name = "ic-oss"
+description = "The Rust version of the client SDK for the ic-oss cluster."
+publish = false
+repository = "https://github.com/storica-oss/ic-oss-cli/tree/main/crates/ic-oss"
+version.workspace = true
+edition.workspace = true
+keywords.workspace = true
+categories.workspace = true
+license.workspace = true
+
+[dependencies]
+bytes = { workspace = true }
+candid = { workspace = true }
+serde = { workspace = true }
+serde_bytes = { workspace = true }
+tokio = { workspace = true }
+tokio-util = { workspace = true }
+tokio-stream = { workspace = true }
+futures = { workspace = true }
+sha3 = { workspace = true }
+ic-agent = { workspace = true }
+ic-oss-types = { path = "../ic-oss-types", version = "1.4" }

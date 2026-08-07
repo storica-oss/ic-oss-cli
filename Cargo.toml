@@ -1,0 +1,71 @@
+[package]
+name = "ic-oss-cli"
+description = "Command-line client for IC OSS uploads, directory sync, backup, and bucket operations."
+publish = true
+repository = "https://github.com/storica-oss/ic-oss-cli"
+version.workspace = true
+edition.workspace = true
+keywords.workspace = true
+categories.workspace = true
+license.workspace = true
+
+[dependencies]
+base64 = { workspace = true }
+candid = { workspace = true, features = ["value", "printer"] }
+serde = { workspace = true, features = ["derive"] }
+serde_bytes = { workspace = true }
+tokio = { workspace = true }
+sha3 = { workspace = true }
+hex = { workspace = true }
+ic-agent = { workspace = true }
+ic-oss = { path = "crates/ic-oss", version = "1.4" }
+ic-oss-types = { path = "crates/ic-oss-types", version = "1.4" }
+anyhow = "1"
+clap = { version = "=4.5", features = ["derive"] }
+infer = "0.15"
+mime-db = "1"
+ring = "0.17"
+pem = "3"
+chrono = { version = "0.4", features = ["serde"] }
+globset = "0.4"
+serde_json = "1"
+
+[dev-dependencies]
+pocket-ic = "15"
+
+[workspace]
+members = ["crates/ic-oss", "crates/ic-oss-types"]
+resolver = "2"
+
+[workspace.package]
+version = "1.4.0"
+edition = "2021"
+repository = "https://github.com/storica-oss/ic-oss-cli"
+keywords = ["object_store", "storage", "oss", "s3", "icp"]
+categories = ["web-programming"]
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+base64 = "0.22"
+bytes = "1"
+candid = "0.10"
+cbor2 = "1"
+chrono = { version = "0.4", default-features = false }
+cose2 = "0.3"
+crc32fast = "1.4"
+ed25519-dalek = "2"
+futures = "0.3"
+hex = "0.4"
+ic-agent = "0.48"
+icrc-ledger-types = "0.1"
+k256 = { version = "0.13", features = ["ecdsa"] }
+num-traits = "0.2"
+serde = "1"
+serde_bytes = "0.11"
+sha2 = "0.11"
+sha3 = "0.12"
+thiserror = "2"
+tokio = { version = "1", features = ["full"] }
+tokio-stream = "0.1"
+tokio-util = { version = "0.7", features = ["codec"] }
+url = "2.5"
