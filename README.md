@@ -20,6 +20,12 @@ cargo install ic-oss-cli
 ic-oss-cli --help
 ```
 
+Install the latest source directly from the official repository:
+
+```sh
+cargo install --git https://github.com/storica-oss/ic-oss-cli.git --locked
+```
+
 ### From Source
 
 ```sh
